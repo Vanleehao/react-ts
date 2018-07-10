@@ -1,5 +1,5 @@
 {
-  "name": "webpackdemo",
+  "name": "good_good_study",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "start": "webpack-dev-server --open",
     "dev": "webpack-dev-server --hot --port 8090 --open"
   },
-  "author": "",
+  "author": "Cooling",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.47",
