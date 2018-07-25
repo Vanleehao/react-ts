@@ -1,5 +1,5 @@
 # react-ts
-一个react入门小项目
+一个react入门小项目 (an apple of love)
 
 
 #### npm install || yarn install

@@ -1,38 +1,35 @@
-import * as React from "react"
-import * as ReactDOM from "react-dom"
-import {
-  BrowserRouter,
-  HashRouter,
-  Route,
-  Link,
-  Switch
-} from "react-router-dom"
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { BrowserRouter, HashRouter, Route, Link, Switch } from "react-router-dom";
+import Test from "./Test";
+import Home from "./Home";
+import ListOfGoods from "./ListOfGoods";
+import "./style.scss";
 
-import { Test } from "./components/Test"
-
-interface appProps {}
-interface appState {}
+interface appProps { }
+interface appState { }
 
 const Demo = (props: any) => {
   console.log(props)
   return (
     <div>
-      <div>测试</div>
-      <Link to="/test">About</Link>
+      <Link to="/home">Home</Link><br />
+      <Link to="/list">List</Link><br />
+      <Link to="/test">Test</Link>
     </div>
   )
 }
 
 class App extends React.Component<appProps, appState> {
-  
+
   public render() {
     return (
-      <div className="app">
-        <Switch>
-          <Route exact path="/" component={Demo} />
-          <Route path="/test" component={Test} />
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path="/" component={Demo} />
+        <Route path="/home" component={Home} />
+        <Route path="/list" component={ListOfGoods} />
+        <Route path="/test" component={Test} />
+      </Switch>
     )
   }
 }
