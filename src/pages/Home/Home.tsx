@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { } from 'antd';
+import { Button } from 'antd';
 import './Home.scss';
 
 interface TestProps {

@@ -1,0 +1,90 @@
+.main-layout {
+  height: 100%;
+
+  .trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .logo {
+    text-align: center;
+    color: #fff;
+    background: #979797;
+    border-radius: 4px;
+    padding: 6px 12px;
+    text-align: center;
+    font-size: 14px;
+    height: 32px;
+    box-sizing: border-box;
+    font-size: 12px;
+  }
+
+  .ant-menu .ant-menu-item {
+    a {
+      display: inline-block;
+    }
+  }
+
+  .header {
+    padding: 0;
+    height: 52px;
+    line-height: 32px;
+
+    .ant-layout-header {
+      height: 52px;
+    }
+
+    .header-wrapper {
+      position: relative;
+      box-shadow: 0 1px 4px rgba(0, 21, 41, .08);
+      height: 52px;
+      padding: 0 12px 0;
+      background: #fff;
+    }
+
+    .info {
+      height: 100%;
+      float: right;
+    }
+  }
+
+  .ant-layout {
+    height: 100%;
+  }
+
+  .content {
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+    margin: 16px 0 16px;
+    overflow: auto;
+  }
+
+  .content::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+  }
+
+  .content::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  .content::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #f3f3f3;
+  }
+
+  .content::-webkit-scrollbar-thumb {
+    width: 10px;
+    background-color: #c1c1c1fa;
+    border-radius: 8px;
+  }
+}
+
+// fix: 解决antd Menu, 有Icon的内嵌菜单缩起时，未显示子菜单的菜单名
+.ant-menu-submenu-popup>ul>li>a {
+  // display: inline-block !important;
+}
