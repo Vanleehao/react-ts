@@ -1,9 +1,40 @@
 .main-layout {
   height: 100%;
+  .ant-layout-header {
+    height: 50px;
+  }
+  .main-setting {
+    width: 120px;
+    float: right;
+    height: 50px;
+    color: #fff;
+    line-height: 50px;
+    background: #001529;
+    border-color: #001529;
+    .ant-menu-horizontal > .ant-menu-submenu:hover {
+      color: #3ab7f8;
+    }
+  }
 
+  .main-menu.collapse {
+    width: 60px;
+    -webkit-transition: width .3s;
+    transition: width .3s;
+    position: absolute;
+    left: 0;
+    height: calc(100% - 50px);
+    overflow: hidden;
+    z-index: 999;
+    .ant-layout-sider.ant-layout-sider-dark {
+      height: 100%;
+    }
+  }
+  .main-menu.collapse:hover {
+    width: 200px;
+  }
   .trigger {
     font-size: 18px;
-    line-height: 64px;
+    line-height: 50px;
     padding: 0 24px;
     cursor: pointer;
     transition: color 0.3s;
@@ -25,7 +56,14 @@
   .ant-menu .ant-menu-item {
     a {
       display: inline-block;
+      margin-left: 12px;
     }
+  }
+  .ant-layout-content {
+    position: absolute;
+    right: 0;
+    width: calc(100% - 92px);
+    height: calc(100% - 50px - 32px);
   }
 
   .header {
@@ -87,4 +125,41 @@
 // fix: 解决antd Menu, 有Icon的内嵌菜单缩起时，未显示子菜单的菜单名
 .ant-menu-submenu-popup>ul>li>a {
   // display: inline-block !important;
+}
+
+.ant-menu-submenu-popup {
+  background: #001529;
+  .ant-menu-submenu > .ant-menu {
+    background: #001529;
+    color: #fff;
+    .ant-menu-vertical.ant-menu-sub {
+      min-width: 120px;
+    }
+
+  }
+}
+.ant-menu-submenu > .ant-menu {
+  background: #001529;
+  color: #fff;
+  .ant-menu-item > a {
+    color: #fff;
+    padding: 0 16px;
+    :hover {
+      opacity: 1;
+      background-color: none;
+    }
+    .ant-menu-item > a::before {
+      background-color: none;
+    }
+  }
+}
+.ant-menu-vertical .ant-menu-item {
+  padding: 0;
+}
+.ant-menu-vertical.ant-menu-sub {
+  min-width: 120px!important;
+  :hover {
+    color: #fff;
+    background: #3ab7f8;
+  }
 }
